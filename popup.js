@@ -1,5 +1,5 @@
 // ===========================================================================
-// TickerSnap
+// LazySnap
 //   Mode 1: football commentary from FotMob / Sofascore (prose-cluster method)
 //   Mode 2: article text from any news page (Mozilla Readability.js, bundled)
 // ===========================================================================

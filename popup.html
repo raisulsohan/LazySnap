@@ -81,10 +81,13 @@
     border-radius: 6px;
     padding: 8px 9px;
   }
+  .credit { margin-top: 12px; text-align: center; font-size: 11px; color: #888; }
+  .credit a { color: #1769ff; text-decoration: none; }
+  .credit a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-  <h1>TickerSnap</h1>
+  <h1>LazySnap</h1>
   <p class="hint"><b>Commentary:</b> open the match's Commentary tab on FotMob or Sofascore.<br/><b>Article:</b> open any news article page.</p>
 
   <button id="extract">Extract commentary</button>
@@ -120,6 +123,8 @@
     <input id="selector" type="text" placeholder="e.g. .entry-content or [data-testid='commentary']" />
     <p class="sub">Leave empty to auto-detect. Useful if commentary or article auto-detect grabs the wrong section (right-click → Inspect to find a selector).</p>
   </details>
+
+  <div class="credit">Made by <a href="https://raisulsohan.com" target="_blank">Raisul Sohan</a></div>
 
   <script src="popup.js"></script>
 </body>

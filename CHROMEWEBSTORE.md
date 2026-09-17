@@ -1,11 +1,12 @@
-# Chrome Web Store Listing — TickerSnap
+# Chrome Web Store Listing — LazySnap
 
 > Last Updated: 2026-09-04
+> Author: Made by Raisul Sohan (https://raisulsohan.com)
 
 ## Store Listing
 
 **Extension Name** [REQUIRED]
-TickerSnap
+LazySnap
 
 
 **Short Description** [REQUIRED]
@@ -13,40 +14,40 @@ Extract match commentary and clean article text into readable format with one cl
 
 
 **Detailed Description** [REQUIRED]
-TickerSnap is a lightweight, one-click text extractor designed for football match commentary and distraction-free article reading. Whether you are analyzing a sports match or archiving news articles and documents for offline reference, TickerSnap extracts clean, formatted text instantly without cluttered ads or navigation sidebars.
+LazySnap is a lightweight, one-click text extractor designed for football match commentary and distraction-free article reading. Whether you are analyzing a sports match or archiving news articles and documents for offline reference, LazySnap extracts clean, formatted text instantly without cluttered ads or navigation sidebars.
 
 KEY FEATURES
 
 1. Football Match Commentary Extraction
-Extract complete chronological match commentary feeds with minute stamps (e.g., 45', 90+3') and key match event markers. TickerSnap automatically navigates through live-loaded timeline feeds to capture the entire match story.
+Extract complete chronological match commentary feeds with minute stamps (e.g., 45', 90+3') and key match event markers. LazySnap automatically navigates through live-loaded timeline feeds to capture the entire match story.
 
 2. Clean Article and Story Extraction
-Powered by the proven Mozilla Readability engine, TickerSnap extracts clean body text from news articles, blogs, online stories, and web documents. Cluttered banners, ads, and sidebars are automatically stripped away.
+Powered by the proven Mozilla Readability engine, LazySnap extracts clean body text from news articles, blogs, online stories, and web documents. Cluttered banners, ads, and sidebars are automatically stripped away.
 
 3. Live Preview and Instant Export
 Review your captured text directly in the scrollable popup preview with real-time word and character counts. Copy to your clipboard with one click or download as an organized plain text (.txt) file.
 
 4. Session Memory and Custom Preferences
-Your extracted preview remains saved during your active browser session even if you close the popup. TickerSnap remembers your preferred sort order (newest first vs oldest first), metadata headers, and optional custom CSS selectors.
+Your extracted preview remains saved during your active browser session even if you close the popup. LazySnap remembers your preferred sort order (newest first vs oldest first), metadata headers, and optional custom CSS selectors.
 
 
 HOW TO USE
 
 For Match Commentary:
 1. Open any football match page and switch to its Commentary tab.
-2. Click the TickerSnap extension icon in your toolbar.
+2. Click the LazySnap extension icon in your toolbar.
 3. Click "Extract commentary".
 4. Copy the result or download as a .txt file.
 
 For Articles and Web Documents:
 1. Open any news article, blog, story, or web document.
-2. Click the TickerSnap extension icon.
+2. Click the LazySnap extension icon.
 3. Click "Extract article text".
 4. Copy or download your clean text.
 
 
 PRIVACY AND PERMISSIONS
-TickerSnap is 100% privacy-respecting and offline-first:
+LazySnap is 100% privacy-respecting and offline-first:
 - Zero data collection: No personal information, browsing history, or keystrokes are recorded or transmitted.
 - 100% local processing: Text extraction and parsing run entirely within your local browser.
 - activeTab & scripting: Used strictly when you click the extension to extract text from the current page.
@@ -54,7 +55,9 @@ TickerSnap is 100% privacy-respecting and offline-first:
 
 
 DISCLAIMER
-TickerSnap is intended for personal research, study, and offline reference. All extracted editorial content and match commentaries remain the intellectual property of their respective publishers.
+LazySnap is intended for personal research, study, and offline reference. All extracted editorial content and match commentaries remain the intellectual property of their respective publishers.
+
+Made by Raisul Sohan (https://raisulsohan.com).
 
 
 **Category** [REQUIRED]
@@ -80,8 +83,8 @@ English
 | Marquee Promo Tile | 1400×560 PNG | ⬜ Optional | Marquee showcase banner |
 
 ### Screenshot Notes
-- Screenshot 1: Open a match commentary tab on a football site (e.g. FotMob or Sofascore), open TickerSnap, extract commentary, and show the preview panel with word count and copy/download buttons.
-- Screenshot 2: Open a news article or blog post, open TickerSnap, extract article text, and highlight the distraction-free extracted output.
+- Screenshot 1: Open a match commentary tab on a football site (e.g. FotMob or Sofascore), open LazySnap, extract commentary, and show the preview panel with word count and copy/download buttons.
+- Screenshot 2: Open a news article or blog post, open LazySnap, extract article text, and highlight the distraction-free extracted output.
 
 
 ## Permissions Justification
@@ -110,7 +113,7 @@ All processing is performed client-side. No user data, website content, or brows
 ## Privacy Policy
 
 **Privacy Policy URL** [REQUIRED]
-`https://<your-username>.github.io/Tickersnap/PRIVACY` or public link to `PRIVACY.md`
+`https://github.com/raisulsohan/LazySnap/blob/main/PRIVACY.md`
 
 
 ## Distribution
@@ -123,13 +126,16 @@ All processing is performed client-side. No user data, website content, or brows
 ## Developer Info
 
 **Publisher Name** [REQUIRED]
-[Your Name / Organization]
+Raisul Sohan
+
+**Website**
+https://raisulsohan.com
 
 **Contact Email** [REQUIRED]
 [Your Email Address]
 
 **Support URL / Email** [RECOMMENDED]
-https://github.com/raisulsohan/Tickersnap/issues
+https://github.com/raisulsohan/LazySnap/issues
 
 
 ## Version History

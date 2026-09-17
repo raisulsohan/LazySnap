@@ -1,8 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "TickerSnap",
+  "name": "LazySnap",
   "version": "1.2",
   "description": "Extract match commentary and clean article text into readable format with one click. For personal research and offline reading.",
+  "author": "Raisul Sohan",
+  "homepage_url": "https://raisulsohan.com",
   "permissions": ["activeTab", "scripting", "storage"],
   "icons": {
     "16": "icons/icon16.png",
@@ -12,7 +14,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "TickerSnap — extract commentary",
+    "default_title": "LazySnap — extract commentary",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

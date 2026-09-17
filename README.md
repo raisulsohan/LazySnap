@@ -1,4 +1,4 @@
-# TickerSnap
+# LazySnap
 
 A Chrome (Manifest V3) extension with two one-click extractors:
 
@@ -15,7 +15,7 @@ and the checkboxes and custom selector are remembered between uses.
 
 ## How it works
 
-TickerSnap doesn't use site-specific selectors. It finds every real sentence block on the page,
+LazySnap doesn't use site-specific selectors. It finds every real sentence block on the page,
 groups them into cards, treats the densest cluster of cards as the commentary list, then keeps
 every card in that cluster and attaches its minute stamp:
 
@@ -40,15 +40,15 @@ no broad "read all websites" warning.
 
 **Commentary:**
 1. Open the match page and switch to its **Commentary** tab.
-2. Click the TickerSnap icon → **Extract commentary**.
+2. Click the LazySnap icon → **Extract commentary**.
 3. If the site lists oldest entries first, untick "newest first" before extracting.
 4. **Copy** or **Download .txt**.
 
 **Article / Story / Book / PDF / Google Docs:**
 1. Open any news article, blog, story, e-library, Google Doc, or web PDF viewer (e.g. PDF.js, Google Drive PDF viewer).
-2. *(For PDFs / Paginated Readers)* Scroll to the page you want — TickerSnap automatically extracts text from the currently focused/visible page.
+2. *(For PDFs / Paginated Readers)* Scroll to the page you want — LazySnap automatically extracts text from the currently focused/visible page.
 3. *(Optional)* Select text on the page first if you only want a specific highlighted passage.
-4. Click the TickerSnap icon → **Extract article text**.
+4. Click the LazySnap icon → **Extract article text**.
 5. *(Optional)* Tick "include Title & Source header" if you want the header metadata included.
 6. **Copy** or **Download .txt**.
 
@@ -68,7 +68,7 @@ to bypass it), and native Chrome internal plugin pages (`chrome-extension://` PD
 
 ## Privacy
 
-TickerSnap respects your privacy: it does not collect, record, or transmit any personal data or browsing activity. All text processing and formatting run 100% locally on your device. For full details, see the [Privacy Policy](PRIVACY.md).
+LazySnap respects your privacy: it does not collect, record, or transmit any personal data or browsing activity. All text processing and formatting run 100% locally on your device. For full details, see the [Privacy Policy](PRIVACY.md).
 
 ## A note on usage rights
 
@@ -79,3 +79,6 @@ don't republish it verbatim or use it commercially. Write your own scripts from 
 Article extraction is powered by [Mozilla Readability](https://github.com/mozilla/readability)
 (Apache License 2.0); the license header is preserved in `Readability.js`.
 
+## Author
+
+Made by [Raisul Sohan](https://raisulsohan.com)

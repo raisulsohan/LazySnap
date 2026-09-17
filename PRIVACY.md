@@ -1,11 +1,11 @@
-# Privacy Policy for TickerSnap
+# Privacy Policy for LazySnap
 
 Last Updated: September 4, 2026
 
-TickerSnap ("the extension") is committed to protecting your privacy. This Privacy Policy explains our practices regarding user information and data processing.
+LazySnap ("the extension") is committed to protecting your privacy. This Privacy Policy explains our practices regarding user information and data processing.
 
 ## 1. No Data Collection or Transmission
-TickerSnap does not collect, record, track, or transmit any personal data, identifiable information, or web browsing history. All operations, text parsing, and formatting occur entirely locally on your device within your browser.
+LazySnap does not collect, record, track, or transmit any personal data, identifiable information, or web browsing history. All operations, text parsing, and formatting occur entirely locally on your device within your browser.
 
 ## 2. Local Storage and Preferences
 The extension uses Chrome's local storage API (`chrome.storage.sync` and `chrome.storage.session`) solely to store:
@@ -21,10 +21,17 @@ This information never leaves your browser and is not shared with any external s
 - **`storage`**: Used exclusively to remember your local settings and preferences between sessions.
 
 ## 4. Third-Party Services
-TickerSnap does not integrate with any third-party analytics services, tracking scripts, advertising networks, or external APIs.
+LazySnap does not integrate with any third-party analytics services, tracking scripts, advertising networks, or external APIs.
 
 ## 5. Changes to This Policy
 If changes are made to this policy, the updated version will be posted at this URL with a revised "Last Updated" date.
 
 ## 6. Contact
-If you have questions or feedback regarding this Privacy Policy, please contact us via the project repository or developer contact email.
+If you have questions or feedback regarding this Privacy Policy, please contact:
+- **Developer:** Raisul Sohan
+- **Website:** [https://raisulsohan.com](https://raisulsohan.com)
+- **Repository:** [https://github.com/raisulsohan/LazySnap](https://github.com/raisulsohan/LazySnap)
+
+---
+
+Made by [Raisul Sohan](https://raisulsohan.com)
