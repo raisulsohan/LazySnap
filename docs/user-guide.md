@@ -18,7 +18,7 @@ LazySnap is a one-click text extractor with two modes: the full **match commenta
 
 LazySnap is loaded as an unpacked extension. There is no build step.
 
-1. Download the repository as a ZIP and unzip it somewhere permanent, or clone it. The browser loads the files from that folder, so do not move or delete it afterwards.
+1. Download `LazySnap-v1.3.zip` from the [latest release](https://github.com/raisulsohan/LazySnap/releases/latest) and unzip it somewhere permanent, or clone the repository. The browser loads the files from that folder, so do not move or delete it afterwards.
 2. Open `chrome://extensions` (Edge: `edge://extensions`, Brave: `brave://extensions`).
 3. Turn on **Developer mode** (top right).
 4. Click **Load unpacked** and pick the `LazySnap` folder, the one that contains `manifest.json`.

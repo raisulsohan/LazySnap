@@ -30,8 +30,8 @@ noise (preview text, stat sentences) may slip in, or auto-detect may miss. For t
 
 ## Install
 
-1. Unzip this folder somewhere permanent.
-2. `chrome://extensions` → enable **Developer mode** → **Load unpacked** → select this folder.
+1. Download `LazySnap-v1.3.zip` from the [latest release](https://github.com/raisulsohan/LazySnap/releases/latest) and unzip it somewhere permanent, or clone this repository.
+2. `chrome://extensions` → enable **Developer mode** → **Load unpacked** → select the LazySnap folder.
 
 Thanks to the `activeTab` model, the extension can't read any site until you click it on a tab —
 no broad "read all websites" warning.

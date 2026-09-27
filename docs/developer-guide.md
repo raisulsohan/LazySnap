@@ -176,6 +176,7 @@ Take `Readability.js` from a release of [mozilla/readability](https://github.com
 
 ### Releasing
 
-1. Bump `version` in `manifest.json` and add a row to the version history in `CHROMEWEBSTORE.md`.
+1. Bump `version` in `manifest.json`, add a row to the version history in `CHROMEWEBSTORE.md`, and update the release file name in `README.md` and `docs/user-guide.md`.
 2. Add the changes to `CHANGELOG.md`.
-3. Zip `manifest.json`, `popup.html`, `popup.js`, `Readability.js` and `icons/`, as described in `CHROMEWEBSTORE.md`.
+3. Build `LazySnap-vX.Y.zip` with `manifest.json`, `popup.html`, `popup.js`, `Readability.js`, `LICENSE`, `THIRD-PARTY-NOTICES.md` and `icons/` at the top level (no wrapping folder). The Chrome Web Store upload is the same without the two license files.
+4. Commit, tag `vX.Y`, push the tag, and create a GitHub release named `LazySnap vX.Y` with the ZIP attached and the changelog entry as its notes.
