@@ -66,6 +66,12 @@ no broad "read all websites" warning.
 Article-mode limits: text behind a **paywall or login won't be extracted** (and the tool won't try
 to bypass it), and native Chrome internal plugin pages (`chrome-extension://` PDFium) restrict script injection by browser policy. For web PDF readers, Google Docs, and news sites, extraction is supported out of the box.
 
+## Documentation
+
+- [User guide](docs/user-guide.md) — both extractors step by step, what gets captured and in which order, preview and persistence, and troubleshooting.
+- [Developer guide](docs/developer-guide.md) — how the extractors are injected, how commentary and article detection work, storage and packaging.
+- [Changelog](CHANGELOG.md) — what changed in each version.
+
 ## Privacy
 
 LazySnap respects your privacy: it does not collect, record, or transmit any personal data or browsing activity. All text processing and formatting run 100% locally on your device. For full details, see the [Privacy Policy](PRIVACY.md).
