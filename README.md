@@ -88,3 +88,8 @@ Article extraction is powered by [Mozilla Readability](https://github.com/mozill
 ## Author
 
 Made by [Raisul Sohan](https://raisulsohan.com)
+
+## License
+
+[MIT](LICENSE) © [Raisul Sohan](https://raisulsohan.com). The bundled `Readability.js` is
+Apache-2.0, © Arc90 Inc and Mozilla; its license header is kept in the file.

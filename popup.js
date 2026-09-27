@@ -768,7 +768,7 @@ async function extractArticleFromPage(opts) {
       return textFromNode(clone);
     }
 
-    // 5. Choose between the scored container and Readability.
+    // 5. Choose between the container and Readability.
     //
     // scoreContainer sums prose length, so a parent always outscores its own
     // child and the winner drifts outward until it hits a page-wide wrapper.
@@ -779,10 +779,22 @@ async function extractArticleFromPage(opts) {
     // Readability, falling back to the container when it returns nothing
     // usable. Readability used to be reachable only when *no* container was
     // found at all, which, with "div" ending the candidate list, was never.
+    //
+    // A container the user named with the custom selector is different: it
+    // is the answer, not a candidate. Readability only steps in there when
+    // that container yields nothing usable; otherwise a substantial
+    // Readability result would replace the very section the user asked for.
     const SUBSTANTIAL = 600;
+    const isCustomRoot = Boolean(customSelector && targetRoot);
     let text = readContainer(targetRoot);
+    let usedReadability = false;
 
-    if (!isModalDetected && typeof Readability === "function") {
+    const tryReadability =
+      typeof Readability === "function" &&
+      !isModalDetected &&
+      (!isCustomRoot || text.length < 50);
+
+    if (tryReadability) {
       try {
         const fullClone = document.cloneNode(true);
         purgeUnwanted(fullClone);
@@ -794,6 +806,7 @@ async function extractArticleFromPage(opts) {
           const rText = textFromNode(holder);
           if (rText.length >= SUBSTANTIAL || rText.length > text.length) {
             text = rText;
+            usedReadability = true;
             if (parsed.title) extractedTitle = parsed.title;
             if (parsed.byline) extractedByline = parsed.byline;
             if (parsed.siteName) extractedSite = parsed.siteName;
@@ -814,6 +827,7 @@ async function extractArticleFromPage(opts) {
       site: cleanSpaces(extractedSite),
       text,
       isModal: isModalDetected,
+      isCustom: isCustomRoot && !usedReadability,
     };
   } catch (e) {
     return { error: e && e.message ? e.message : String(e) };
@@ -1111,6 +1125,7 @@ $("extractArticle").addEventListener("click", async () => {
       if (data.isSelection) source = "from selection";
       else if (data.isPdfPage) source = data.byline || "from focused page";
       else if (data.isModal) source = "from open popup";
+      else if (data.isCustom) source = "from custom selector";
 
       setResult(
         text,

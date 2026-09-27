@@ -1,6 +1,6 @@
 # Chrome Web Store Listing — LazySnap
 
-> Last Updated: 2026-09-04
+> Last Updated: 2026-09-27
 > Author: Made by Raisul Sohan (https://raisulsohan.com)
 
 ## Store Listing
@@ -142,6 +142,7 @@ https://github.com/raisulsohan/LazySnap/issues
 
 | Version | Date | Changes | Status |
 |---------|------|---------|--------|
+| 1.3 | 2026-09-27 | Custom container selector now takes priority over Readability in article mode; status shows "from custom selector" | Draft |
 | 1.2 | 2026-09-04 | Initial Chrome Web Store release preparation with commentary and article extraction | Draft |
 
 

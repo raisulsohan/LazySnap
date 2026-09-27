@@ -2,6 +2,17 @@
 
 All notable changes to LazySnap are listed here. Version numbers follow the `version` field in `manifest.json`.
 
+## [1.3] — 2026-09-27
+
+### Fixed
+
+- Article mode: a container named with the custom selector is now the answer, not a candidate. Readability is only consulted when that container yields no usable text (under 50 characters). Before, a substantial Readability result (600 characters or more, or simply longer) replaced the section the user had asked for.
+
+### Added
+
+- The status line and preview meta show *from custom selector* when the capture came from the selected container.
+- MIT license file.
+
 ## Rename — 2026-09-17
 
 The extension was renamed from **TickerSnap** to **LazySnap**. The version number did not change. The rename updated the manifest name, the docs, the store listing and the repository links, and added the *Made by Raisul Sohan* credit link to the popup.

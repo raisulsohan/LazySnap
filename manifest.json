@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LazySnap",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Extract match commentary and clean article text into readable format with one click. For personal research and offline reading.",
   "author": "Raisul Sohan",
   "homepage_url": "https://raisulsohan.com",

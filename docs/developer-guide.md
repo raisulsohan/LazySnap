@@ -72,7 +72,7 @@ The popup turns each entry into a line with `lineFor()`: the minute, or the type
 
 ## Article extractor
 
-`extractArticleFromPage(opts)` with `opts = { customSelector }`. Everything is wrapped in one `try`; a thrown error comes back as `{ error: message }`. The success shape is `{ title, byline, site, text }` plus one of `isSelection`, `isPdfPage` (with `pageNum`) or `isModal`.
+`extractArticleFromPage(opts)` with `opts = { customSelector }`. Everything is wrapped in one `try`; a thrown error comes back as `{ error: message }`. The success shape is `{ title, byline, site, text }` plus the flags `isSelection`, `isPdfPage` (with `pageNum`), `isModal` and `isCustom`.
 
 The stages run in this order and the first one that produces text returns.
 
@@ -111,7 +111,7 @@ Skipped when `customSelector` is set. `getFocusedPaginatedPage()` looks for `.pd
 - `purgeUnwanted` removes `script`, `style`, `noscript`, `template`, `iframe`, `object`, `embed`, `svg`, `canvas` unconditionally, and every `UNWANTED_SELECTORS` match (figures, captions, asides, nav, header, footer, buttons, breadcrumbs, badges, pagination, meta lines, share buttons, ratings, comments, author boxes, related posts, widgets, pull-quotes, callouts, credits, promos, ads) when it holds fewer than 600 characters or is one of the structural tags.
 - `textFromNode` walks `p, h1–h6, li, blockquote, pre, div`, keeps only leaf blocks (a `div` counts only if it contains no other block), skips anything inside figure/aside/nav/header/footer/button, strips BBCode, drops lines under 15 characters and lines `isNoiseLine` rejects (separators, close buttons, single-link promo paragraphs, credit/caption/promo/meta prefixes in English and Bengali, short badge-like fragments). Headings that are just a link, or equal to the title, are skipped. Blockquotes and short blocks whose text is contained in a longer paragraph are dropped as pull-quotes; exact consecutive duplicates are dropped. Blocks are joined with blank lines. If nothing survives, the container's raw text is used.
 
-**Readability.** Unless the chosen container is a modal, the whole document is cloned, purged and handed to `new Readability(clone, { keepClasses: false }).parse()`. The parsed HTML is purged and passed through `textFromNode` too. Readability's text replaces the container's when it has at least `SUBSTANTIAL` (600) characters or is simply longer, and its title, byline and site name are adopted. This holds even when a custom selector was given; only a detected modal skips Readability.
+**Readability.** Unless the chosen container is a modal, the whole document is cloned, purged and handed to `new Readability(clone, { keepClasses: false }).parse()`. The parsed HTML is purged and passed through `textFromNode` too. Readability's text replaces the container's when it has at least `SUBSTANTIAL` (600) characters or is simply longer, and its title, byline and site name are adopted. A detected modal skips Readability. A container named by the custom selector skips it too, unless that container yields under 50 characters; `isCustom` is true when the custom container's text was kept.
 
 **Fallbacks.** Under 50 characters, `document.body` is read the same way. Still under 50 characters returns `{ error: 'NO_ARTICLE' }`.
 
@@ -120,7 +120,7 @@ Skipped when `customSelector` is set. `getFocusedPaginatedPage()` looks for `.pd
 State lives in three variables: `extractedText`, `extractedFilename` and `previewMeta`. `setResult()` sets all three, renders the preview, enables Copy/Download, writes the status and saves the session. `setError()` writes the status and, when a capture exists, appends *(Previous capture is still below.)* without touching it.
 
 - **Commentary click**: reads the selector and the *newest first* checkbox, injects `extractCommentary`, builds the text as title, `=` underline, blank line, one `lineFor()` line per entry, and names the file `<sanitised title> - commentary.txt`.
-- **Article click**: injects `Readability.js`, then `extractArticleFromPage`. With *include header* on, prepends title, underline and `site — byline`. The word count reported in the status is computed from the final text so it always matches the preview meta. The file is `<sanitised title>.txt`.
+- **Article click**: injects `Readability.js`, then `extractArticleFromPage`. With *include header* on, prepends title, underline and `site — byline`. The source label in the status and the preview meta comes from the result flags: *from selection*, *Page N*, *from open popup* or *from custom selector*. The word count reported in the status is computed from the final text so it always matches the preview meta. The file is `<sanitised title>.txt`.
 - **Copy**: `navigator.clipboard.writeText`.
 - **Download**: a `Blob` of type `text/plain;charset=utf-8` through a temporary `<a download>`.
 - **Preview**: `renderPreview()` shows up to `PREVIEW_CHARS` (20,000) characters and appends a truncation note when the text is longer. **Hide / Show** flips `prefs.previewOpen`.

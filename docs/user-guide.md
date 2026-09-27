@@ -1,6 +1,6 @@
 # LazySnap User Guide
 
-LazySnap is a one-click text extractor with two modes: the full **match commentary** from a FotMob or Sofascore match page, and the clean **article text** of a news story, blog post, web document or PDF page. Everything runs inside your browser. This guide covers every feature of version 1.2.
+LazySnap is a one-click text extractor with two modes: the full **match commentary** from a FotMob or Sofascore match page, and the clean **article text** of a news story, blog post, web document or PDF page. Everything runs inside your browser. This guide covers every feature of version 1.3.
 
 ## Contents
 
@@ -100,7 +100,7 @@ Text that a site hides behind a paywall or a login is not on the page, so it is 
 ## Preview, Copy and Download
 
 - The preview shows the first 20,000 characters of the capture. **Copy** and **Download .txt** always give the full text.
-- The line above the preview shows the entry count or the source (*from selection*, *Page 4*, *from open popup*), the word count and the character count.
+- The line above the preview shows the entry count or the source (*from selection*, *Page 4*, *from open popup*, *from custom selector*), the word count and the character count.
 - **Hide** collapses the preview; **Show** brings it back. The choice is remembered.
 - **Copy** writes to the clipboard and confirms with *Copied to clipboard.*
 - **Download .txt** saves to your Downloads folder. Article files are named after the title (`<title>.txt`); commentary files as `<title> - commentary.txt`. Characters that are not allowed in file names are replaced and the name is cut at 80 characters.
@@ -121,7 +121,7 @@ When a custom selector is saved, the Advanced panel opens by itself so you do no
 Type a CSS selector, for example `.entry-content` or `[data-testid='commentary']`, to limit extraction to that element. Leave it empty for auto-detect. To find a selector, right-click a line of the text you want, choose **Inspect** and read the element's id or class.
 
 - **Commentary**: only prose inside the selected element is harvested.
-- **Article**: the selected element is read first, and the paginated-page detection is skipped. Readability is still run on the page, and its result replaces the selected element's text when it is substantial (600 characters or more) or longer. If Readability keeps winning and you need exactly the selected element, select its text on the page instead: a selection always takes priority.
+- **Article**: the selected element is read on its own. The paginated-page detection is skipped and Readability is not consulted, unless the element yields no usable text (under 50 characters). The status line shows *from custom selector*. A text selection on the page still takes priority over the selector.
 
 The selector is saved, so a site that needs one only needs it typed once. Clear the field to go back to auto-detect.
 
