@@ -30,6 +30,8 @@ Readability.js       Mozilla Readability, injected before the article extractor
 icons/               16, 32, 48 and 128 px icons
 CHROMEWEBSTORE.md    store listing text, permission justifications, packaging steps
 PRIVACY.md           privacy policy linked from the store listing
+LICENSE              MIT license for LazySnap itself
+THIRD-PARTY-NOTICES.md  Readability.js attribution (Apache-2.0)
 CHANGELOG.md         version history
 docs/                this guide and the user guide
 ```
